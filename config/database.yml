@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://mysite:b42N46QZicJwW56zbngZqFKZrzVZymWo@dpg-cijckjtgkuvhnne9ust0-a/mysite_5y27'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
