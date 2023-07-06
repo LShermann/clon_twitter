@@ -1,8 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tweets</h1>
+<h1>Clon Tweets</h1>
 
-<%= link_to "New tweet", new_tweet_path %>
+<h1>Tweets <span class="badge bg-secondary">
+<%= link_to "New", new_tweet_path %>
+</span></h1>
+
 
 <%= form_with url: tweets_path, method: :get do |form|%>
   <%= form.text_field :query_text, placeholder: t('Query text'), value: params[:query_text]%>
@@ -11,11 +14,6 @@
 <div id="tweets">
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-      <%= link_to "Edit this tweet", edit_tweet_path(tweet) %>
-      <%= button_to "Destroy this tweet", @tweet, method: :delete %>
-    </p>
   <% end %>
 </div>
 
